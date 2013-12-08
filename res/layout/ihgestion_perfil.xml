@@ -109,15 +109,6 @@
         android:text="Guardar Perfil" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignLeft="@+id/gridView1"
-        android:text="Asociar Dispositivos a Perfil" />
-
-    <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -126,5 +117,14 @@
         android:layout_marginLeft="26dp"
         android:layout_toRightOf="@+id/button1"
         android:text="Nuevo Perfil" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_alignLeft="@+id/gdDispositivosAsociados"
+        android:text="Asociar Dispositivos a Perfil" />
 
 </RelativeLayout>

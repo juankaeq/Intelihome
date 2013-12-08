@@ -14,6 +14,8 @@ public class AsociarPerfDispView extends Activity implements OnClickListener {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ihasociar_perfil_dispositivo);
+		
+		
 	}
 	@Override
 	public void onClick(View v) {

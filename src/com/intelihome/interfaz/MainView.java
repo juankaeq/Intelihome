@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.intelihome.R;
+import com.intelihome.dispositivos.AdaptadorDispositivo;
+import com.intelihome.dispositivos.DispositivoControl;
+import com.intelihome.perfiles.AdaptadorPerfil;
 import com.intelihome.perfiles.Perfil;
 import com.intelihome.perfiles.PerfilControl;
 
@@ -31,7 +34,7 @@ public class MainView extends Activity implements OnClickListener{
 		lstPerfilesActivos = (ListView)findViewById(R.id.lstPerfilesActivos);
 		grdDispositivosActivos = (GridView)findViewById(R.id.grdDispositivosActivos);
 		desplegarPerfilesEnLista();
-		
+		desplegarListaDispositivos();
 	}
 	@Override
 	public void onClick(View v) {
@@ -42,33 +45,16 @@ public class MainView extends Activity implements OnClickListener{
 	
 	public void desplegarPerfilesEnLista(){
 		
-		StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, PerfilControl.consultarPerfilQuemado());
+		AdaptadorPerfil adapter = new AdaptadorPerfil(this, android.R.layout.simple_list_item_1, PerfilControl.consultarPerfilQuemado());
 		lstPerfilesActivos.setAdapter(adapter);
 		
 	}
 	
-	  private class StableArrayAdapter extends ArrayAdapter<Perfil> {
-
-		    HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
-
-		    public StableArrayAdapter(Context context, int textViewResourceId,
-		        List<Perfil> objects) {
-		      super(context, textViewResourceId, objects);
-		      for (int i = 0; i < objects.size(); ++i) {
-		        mIdMap.put(objects.get(i).getNombre(), i);
-		      }
-		    }
-
-		    @Override
-		    public long getItemId(int position) {
-		      Perfil item = getItem(position);
-		      return mIdMap.get(item);
-		    }
-
-		    @Override
-		    public boolean hasStableIds() {
-		      return true;
-		    }
-
-		  }
+	public void desplegarListaDispositivos(){
+		DispositivoControl.generarDispositivos();
+		AdaptadorDispositivo adapter = new AdaptadorDispositivo(this, android.R.layout.simple_list_item_1, DispositivoControl.dispositivos);
+		grdDispositivosActivos.setAdapter(adapter);
+	}
+	
+	  
 }

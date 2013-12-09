@@ -45,5 +45,9 @@ public class Perfil {
 		this.dispositivosAsociados = dispositivosAsociados;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return nombre;
+	}
 }

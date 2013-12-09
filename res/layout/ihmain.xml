@@ -14,7 +14,7 @@
     </ListView>
 
     <GridView
-        android:id="@+id/gridView1"
+        android:id="@+id/grdDispositivosActivos"
         android:layout_width="700dp"
         android:layout_height="400dp"
         android:layout_alignParentRight="true"

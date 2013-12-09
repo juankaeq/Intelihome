@@ -16,7 +16,7 @@ public class PerfilControl {
 			Perfil p = new Perfil();
 			p.setNombre("Perfil"+(i+1));
 			p.setHoraFin(""+(i+1));
-			
+			p.quemarDispositivos(i);
 			perfilesActivos.add(p);
 			
 		}

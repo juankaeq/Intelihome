@@ -21,7 +21,7 @@ public class AdaptadorPerfil extends ArrayAdapter<Perfil>{
 	    @Override
 	    public long getItemId(int position) {
 	      Perfil item = getItem(position);
-	      return mIdMap.get(item);
+	      return mIdMap.get(item.getNombre());
 	    }
 
 	    @Override

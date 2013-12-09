@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/spnPerfiles"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -16,8 +16,8 @@
         android:id="@+id/relativeLayout1"
         android:layout_width="400dp"
         android:layout_height="400dp"
-        android:layout_alignLeft="@+id/spinner1"
-        android:layout_below="@+id/spinner1" >
+        android:layout_alignLeft="@+id/spnPerfiles"
+        android:layout_below="@+id/spnPerfiles" >
 
         <TextView
             android:id="@+id/lblNombrePerfil"
@@ -100,7 +100,7 @@
     </GridView>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnGPGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/relativeLayout1"
@@ -109,22 +109,20 @@
         android:text="Guardar Perfil" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnGPNuevo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_marginLeft="26dp"
-        android:layout_toRightOf="@+id/button1"
+        android:layout_alignRight="@+id/relativeLayout1"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginRight="38dp"
         android:text="Nuevo Perfil" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnGPAsociar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button3"
-        android:layout_alignBottom="@+id/button3"
-        android:layout_alignLeft="@+id/gdDispositivosAsociados"
+        android:layout_below="@+id/gdDispositivosAsociados"
+        android:layout_centerHorizontal="true"
         android:text="Asociar Dispositivos a Perfil" />
 
 </RelativeLayout>

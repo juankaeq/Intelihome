@@ -33,4 +33,29 @@
         android:text="Perfiles"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignLeft="@+id/grdDispositivosActivos"
+        android:text="Dispositivos Activos"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageButton
+        android:id="@+id/imgBtnPerfiles"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_menu_name" />
+
+    <ImageButton
+        android:id="@+id/imgBtnDispositivos"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_above="@+id/textView2"
+        android:layout_alignRight="@+id/grdDispositivosActivos"
+        android:src="@drawable/ic_launcher2" />
+
 </RelativeLayout>

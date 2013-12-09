@@ -11,6 +11,18 @@ public class Perfil {
 	private String horaFin;
 	
 	private ArrayList<Dispositivo> dispositivosAsociados = new ArrayList<Dispositivo>();
+	
+	public void quemarDispositivos(int cant){
+		
+		dispositivosAsociados = new ArrayList<Dispositivo>();
+		for (int i = 0; i < cant; i++) {
+			Dispositivo d = new Dispositivo(i);
+			d.setNombre("Dispositivo: "+i);
+			d.setSerial(Integer.toHexString(i));
+			d.setRutaImagen("/Img/"+i+".jpg");
+			dispositivosAsociados.add(d);
+		}
+	}
 
 	public String getNombre() {
 		return nombre;
@@ -49,5 +61,11 @@ public class Perfil {
 	public String toString() {
 		// TODO Auto-generated method stub
 		return nombre;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		// TODO Auto-generated method stub
+		return ((Perfil)o).nombre.equals(nombre);
 	}
 }

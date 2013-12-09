@@ -1,5 +1,7 @@
 package com.intelihome.dispositivos;
 
+import com.intelihome.perfiles.Perfil;
+
 public class Dispositivo {
 
 	private int codigo;
@@ -46,6 +48,15 @@ public class Dispositivo {
 		this.rutaImagen = rutaImagen;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return serial;
+	}
 	
-	
+	@Override
+	public boolean equals(Object o) {
+		// TODO Auto-generated method stub
+		return ((Dispositivo)o).serial.equals(serial);
+	}
 }
